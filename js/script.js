@@ -1,7 +1,3 @@
-for(let i = 0;;i++) {
-    document.title = i;   
-}
-
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu_item'),
