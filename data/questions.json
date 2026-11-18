@@ -1,0 +1,717 @@
+{
+  "questions": [
+    {
+      "id": "Q01",
+      "param": "occasion",
+      "group": "Ситуация",
+      "label": "Повод выбора",
+      "text": "Для чего вы выбираете напиток?",
+      "options": [
+        {
+          "value": "food",
+          "label": "К еде"
+        },
+        {
+          "value": "party",
+          "label": "Для вечеринки"
+        },
+        {
+          "value": "everyday",
+          "label": "На каждый день"
+        },
+        {
+          "value": "sport",
+          "label": "После активности"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q01.svg",
+      "imageAlt": "Стакан колы рядом с тарелкой и праздничной звездой"
+    },
+    {
+      "id": "Q02",
+      "param": "healthGoals",
+      "group": "Предпочтения",
+      "label": "Основная цель",
+      "text": "Что для вас важнее при выборе?",
+      "options": [
+        {
+          "value": "diet",
+          "label": "Без сахара и с минимумом калорий"
+        },
+        {
+          "value": "light",
+          "label": "Менее калорийный вариант"
+        },
+        {
+          "value": "taste",
+          "label": "Прежде всего насыщенный вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q02.svg",
+      "imageAlt": "Весы с листом и стаканом для выбора приоритета"
+    },
+    {
+      "id": "Q03",
+      "param": "favoriteFlavor",
+      "group": "Вкус",
+      "label": "Любимый вкус",
+      "text": "Какой вкус вам ближе?",
+      "options": [
+        {
+          "value": "classic",
+          "label": "Классическая кола"
+        },
+        {
+          "value": "vanilla",
+          "label": "Ванильный"
+        },
+        {
+          "value": "cherry",
+          "label": "Вишнёвый"
+        },
+        {
+          "value": "lemon",
+          "label": "Лимонный"
+        },
+        {
+          "value": "orange",
+          "label": "Апельсиновый"
+        },
+        {
+          "value": "coffee",
+          "label": "Кофейный"
+        },
+        {
+          "value": "raspberry",
+          "label": "Малиновый"
+        },
+        {
+          "value": "herbal",
+          "label": "Травяной"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q03.svg",
+      "imageAlt": "Кола, цитрусовая долька и вишни как варианты вкуса"
+    },
+    {
+      "id": "Q04",
+      "param": "sugarAttitude",
+      "group": "Состав",
+      "label": "Отношение к сахару",
+      "text": "Как вы относитесь к сахару в напитке?",
+      "options": [
+        {
+          "value": "avoid",
+          "label": "Выбираю без сахара"
+        },
+        {
+          "value": "allow",
+          "label": "Предпочитаю вариант с сахаром"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q04.svg",
+      "imageAlt": "Кубики сахара и знак уменьшения рядом со стаканом"
+    },
+    {
+      "id": "Q05",
+      "param": "caloriesConcern",
+      "group": "Состав",
+      "label": "Важность калорийности",
+      "text": "Насколько важна низкая калорийность?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Очень важна"
+        },
+        {
+          "value": "medium",
+          "label": "Учитываю, но это не главное"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q05.svg",
+      "imageAlt": "Убывающие столбики и лист как символ низкой калорийности"
+    },
+    {
+      "id": "Q06",
+      "param": "classicVsUnusual",
+      "group": "Вкус",
+      "label": "Классика или необычность",
+      "text": "Предпочитаете классический или необычный вкус?",
+      "options": [
+        {
+          "value": "classic",
+          "label": "Классический"
+        },
+        {
+          "value": "unusual",
+          "label": "Необычный"
+        },
+        {
+          "value": "balanced",
+          "label": "Баланс классики и новых нот"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q06.svg",
+      "imageAlt": "Классический стакан и стакан с оригинальной звездой"
+    },
+    {
+      "id": "Q07",
+      "param": "carbonationLevel",
+      "group": "Вкус",
+      "label": "Газированность",
+      "text": "Какую газированность вы предпочитаете?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Сильную"
+        },
+        {
+          "value": "medium",
+          "label": "Умеренную"
+        },
+        {
+          "value": "low",
+          "label": "Более мягкую"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q07.svg",
+      "imageAlt": "Стакан с пузырьками разного размера"
+    },
+    {
+      "id": "Q08",
+      "param": "sweetnessPreference",
+      "group": "Вкус",
+      "label": "Сладость",
+      "text": "Насколько сладким должен быть напиток?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Очень сладким"
+        },
+        {
+          "value": "medium",
+          "label": "Умеренно сладким"
+        },
+        {
+          "value": "low",
+          "label": "Менее сладким"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q08.svg",
+      "imageAlt": "Ложка и кубики сахара для выбора сладости"
+    },
+    {
+      "id": "Q09",
+      "param": "foodType",
+      "group": "Ситуация",
+      "label": "Тип еды",
+      "text": "С какой едой вы планируете пить колу?",
+      "options": [
+        {
+          "value": "hearty",
+          "label": "С сытными блюдами"
+        },
+        {
+          "value": "dessert",
+          "label": "С десертом"
+        },
+        {
+          "value": "snack",
+          "label": "С лёгким перекусом"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q09.svg",
+      "imageAlt": "Тарелка с вилкой, овощами и кусочком еды"
+    },
+    {
+      "id": "Q10",
+      "param": "budget",
+      "group": "Покупка",
+      "label": "Бюджет",
+      "text": "Какой бюджет вы рассматриваете?",
+      "options": [
+        {
+          "value": "low",
+          "label": "Бюджетный вариант"
+        },
+        {
+          "value": "medium",
+          "label": "Средняя ценовая категория"
+        },
+        {
+          "value": "premium",
+          "label": "Готов рассмотреть дорогие варианты"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q10.svg",
+      "imageAlt": "Монеты разной высоты для выбора бюджета"
+    },
+    {
+      "id": "Q11",
+      "param": "brandLoyalty",
+      "group": "Покупка",
+      "label": "Предпочтение бренда",
+      "text": "Есть ли у вас предпочтение по бренду?",
+      "options": [
+        {
+          "value": "coca",
+          "label": "Coca-Cola"
+        },
+        {
+          "value": "pepsi",
+          "label": "Pepsi"
+        },
+        {
+          "value": "local",
+          "label": "Российские бренды"
+        },
+        {
+          "value": "familiar",
+          "label": "Любой хорошо знакомый бренд"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q11.svg",
+      "imageAlt": "Три нейтральные бутылки и отметка предпочтения"
+    },
+    {
+      "id": "Q12",
+      "param": "noveltySeeking",
+      "group": "Вкус",
+      "label": "Готовность к новому",
+      "text": "Хотите попробовать что-то новое?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Да, люблю эксперименты"
+        },
+        {
+          "value": "low",
+          "label": "Предпочитаю знакомый вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q12.svg",
+      "imageAlt": "Компас и искры как символ готовности к новому"
+    },
+    {
+      "id": "Q13",
+      "param": "timeOfDay",
+      "group": "Ситуация",
+      "label": "Время суток",
+      "text": "Когда вы планируете пить напиток?",
+      "options": [
+        {
+          "value": "morning",
+          "label": "Утром"
+        },
+        {
+          "value": "day",
+          "label": "Днём"
+        },
+        {
+          "value": "evening",
+          "label": "Вечером, предпочитаю меньше кофеина"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q13.svg",
+      "imageAlt": "Часы между солнцем и луной"
+    },
+    {
+      "id": "Q14",
+      "param": "caffeineTolerance",
+      "group": "Состав",
+      "label": "Предпочтение по кофеину",
+      "text": "Какой условный уровень кофеина вы предпочитаете?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Высокий"
+        },
+        {
+          "value": "medium",
+          "label": "Средний"
+        },
+        {
+          "value": "low",
+          "label": "Как можно ниже"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q14.svg",
+      "imageAlt": "Чашка кофе и кофейные зёрна"
+    },
+    {
+      "id": "Q15",
+      "param": "originPreference",
+      "group": "Покупка",
+      "label": "Происхождение бренда",
+      "text": "Какое происхождение бренда вам ближе?",
+      "options": [
+        {
+          "value": "russian",
+          "label": "Российский"
+        },
+        {
+          "value": "international",
+          "label": "Международный"
+        },
+        {
+          "value": "european",
+          "label": "Европейский"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q15.svg",
+      "imageAlt": "Глобус с меридианами и отметкой на карте"
+    },
+    {
+      "id": "Q16",
+      "param": "tasteIntensity",
+      "group": "Вкус",
+      "label": "Насыщенность",
+      "text": "Насколько насыщенный вкус вы ищете?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Яркий и интенсивный"
+        },
+        {
+          "value": "low",
+          "label": "Мягкий и лёгкий"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q16.svg",
+      "imageAlt": "Стакан и волны разной интенсивности вкуса"
+    },
+    {
+      "id": "Q17",
+      "param": "everydayFrequency",
+      "group": "Ситуация",
+      "label": "Частота выбора",
+      "text": "Для каких покупок вы выбираете напиток?",
+      "options": [
+        {
+          "value": "often",
+          "label": "Для привычных покупок"
+        },
+        {
+          "value": "rare",
+          "label": "Изредка, для разнообразия"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q17.svg",
+      "imageAlt": "Календарь с повторяющимися отметками выбора"
+    },
+    {
+      "id": "Q18",
+      "param": "companySize",
+      "group": "Ситуация",
+      "label": "Размер компании",
+      "text": "Для кого вы выбираете напиток?",
+      "options": [
+        {
+          "value": "alone",
+          "label": "Для себя"
+        },
+        {
+          "value": "small",
+          "label": "Для небольшой группы"
+        },
+        {
+          "value": "large",
+          "label": "Для большой компании"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q18.svg",
+      "imageAlt": "Три стакана для небольшой или большой компании"
+    },
+    {
+      "id": "Q19",
+      "param": "aftertaste",
+      "group": "Вкус",
+      "label": "Послевкусие",
+      "text": "Какое послевкусие вам нравится?",
+      "options": [
+        {
+          "value": "soft",
+          "label": "Мягкое и ненавязчивое"
+        },
+        {
+          "value": "long",
+          "label": "Выраженное и долгое"
+        },
+        {
+          "value": "herbal",
+          "label": "С травяными нотами"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q19.svg",
+      "imageAlt": "Круги послевкусия и травяной лист"
+    },
+    {
+      "id": "Q20",
+      "param": "fruitNotes",
+      "group": "Вкус",
+      "label": "Фруктовые ноты",
+      "text": "Какие фруктовые ноты вам ближе?",
+      "options": [
+        {
+          "value": "citrus",
+          "label": "Цитрусовые"
+        },
+        {
+          "value": "berry",
+          "label": "Ягодные"
+        },
+        {
+          "value": "none",
+          "label": "Без фруктовых нот"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q20.svg",
+      "imageAlt": "Лимонная долька и вишни для выбора фруктовых нот"
+    },
+    {
+      "id": "Q21",
+      "param": "availability",
+      "group": "Покупка",
+      "label": "Доступность",
+      "text": "Насколько важна распространённость напитка?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Хочу легко находить в продаже"
+        },
+        {
+          "value": "niche",
+          "label": "Рассмотрю нишевые варианты"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q21.svg",
+      "imageAlt": "Магазин с полкой напитков для оценки доступности"
+    },
+    {
+      "id": "Q22",
+      "param": "sweetenerAttitude",
+      "group": "Состав",
+      "label": "Подсластители",
+      "text": "Как вы относитесь к подсластителям?",
+      "options": [
+        {
+          "value": "accept",
+          "label": "Рассматриваю варианты с подсластителями"
+        },
+        {
+          "value": "avoid",
+          "label": "Предпочитаю напитки с сахаром"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q22.svg",
+      "imageAlt": "Сахарные кубики и лист как варианты подслащивания"
+    },
+    {
+      "id": "Q23",
+      "param": "pricePriority",
+      "group": "Покупка",
+      "label": "Приоритет цены",
+      "text": "Насколько цена влияет на ваш выбор?",
+      "options": [
+        {
+          "value": "high",
+          "label": "Низкая цена — один из главных факторов"
+        },
+        {
+          "value": "low",
+          "label": "Готов доплатить за необычный вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q23.svg",
+      "imageAlt": "Кошелёк и монеты для оценки важности цены"
+    },
+    {
+      "id": "Q24",
+      "param": "foodVersatility",
+      "group": "Ситуация",
+      "label": "Универсальность к еде",
+      "text": "Нужен ли универсальный напиток к разным блюдам?",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Да, универсальность важна"
+        },
+        {
+          "value": "no",
+          "label": "Нет, интересен самостоятельный вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q24.svg",
+      "imageAlt": "Тарелка и разные блюда как символ универсальности"
+    },
+    {
+      "id": "Q25",
+      "param": "servingStyle",
+      "group": "Подача",
+      "label": "Подача со льдом",
+      "text": "Как вы планируете подавать напиток?",
+      "options": [
+        {
+          "value": "ice",
+          "label": "Со льдом, хочу сохранить яркий вкус при разбавлении"
+        },
+        {
+          "value": "plain",
+          "label": "Без льда, предпочитаю мягкий вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q25.svg",
+      "imageAlt": "Кубики льда рядом с наполненным стаканом"
+    },
+    {
+      "id": "Q26",
+      "param": "snackPairing",
+      "group": "Ситуация",
+      "label": "Характер закусок",
+      "text": "Какой вкус напитка вы хотите получить в сочетании с закусками?",
+      "options": [
+        {
+          "value": "salty",
+          "label": "Менее сладкий напиток к солёным закускам"
+        },
+        {
+          "value": "sweet",
+          "label": "Ванильный акцент к сладким закускам"
+        },
+        {
+          "value": "none",
+          "label": "Без закусок, хочу необычный самостоятельный вкус"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q26.svg",
+      "imageAlt": "Солёные чипсы и сладкий пончик"
+    },
+    {
+      "id": "Q27",
+      "param": "desiredMood",
+      "group": "Предпочтения",
+      "label": "Желаемое впечатление",
+      "text": "Какое впечатление от напитка вам сейчас ближе?",
+      "options": [
+        {
+          "value": "lively",
+          "label": "Яркий вкус, рассматриваю более высокий уровень кофеина"
+        },
+        {
+          "value": "relaxed",
+          "label": "Мягкий вкус и как можно меньше кофеина"
+        },
+        {
+          "value": null,
+          "label": "Не важно / Не знаю"
+        }
+      ],
+      "image": "img/questions/Q27.svg",
+      "imageAlt": "Солнце, луна и стакан для выбора яркого или спокойного впечатления"
+    }
+  ]
+}

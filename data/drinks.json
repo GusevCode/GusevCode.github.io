@@ -1,0 +1,997 @@
+{
+  "note": "Учебная экспертная модель. Все оценки по шкале от 1 до 5 условны и не являются результатами измерений, актуальными ценами или рекомендациями по здоровью. Ассортимент и состав конкретной упаковки могут отличаться. Повседневность означает удобство выбора, а не пользу напитка.",
+  "attributes": {
+    "sweetness": {
+      "name": "Уровень сладости",
+      "description": "Субъективное ощущение сладости, включая подсластители",
+      "scale": "1 — слабо сладкий; 5 — очень сладкий"
+    },
+    "sugar": {
+      "name": "Содержание сахара",
+      "description": "Относительное содержание сахара в учебной модели",
+      "scale": "1 — без сахара; 5 — высокое содержание"
+    },
+    "calories": {
+      "name": "Калорийность",
+      "description": "Относительная энергетическая ценность",
+      "scale": "1 — очень низкая; 5 — высокая"
+    },
+    "classicTaste": {
+      "name": "Классический вкус",
+      "description": "Сходство с привычным вкусом классической колы",
+      "scale": "1 — мало похож; 5 — классический профиль"
+    },
+    "unusualTaste": {
+      "name": "Необычность вкуса",
+      "description": "Выраженность оригинальных вкусовых особенностей",
+      "scale": "1 — привычный; 5 — оригинальный"
+    },
+    "carbonation": {
+      "name": "Газированность",
+      "description": "Ощущаемая интенсивность газации",
+      "scale": "1 — слабая; 5 — сильная"
+    },
+    "foodPairing": {
+      "name": "Сочетаемость с едой",
+      "description": "Универсальность сочетания с разными блюдами",
+      "scale": "1 — низкая; 5 — высокая"
+    },
+    "partyFit": {
+      "name": "Подходит для компании",
+      "description": "Условная универсальность выбора для группы людей",
+      "scale": "1 — на любителя; 5 — универсальный выбор"
+    },
+    "everydayUse": {
+      "name": "Повседневное употребление",
+      "description": "Удобство обычного выбора по цене, доступности и вкусу",
+      "scale": "1 — для особого случая; 5 — привычный выбор"
+    },
+    "popularity": {
+      "name": "Популярность",
+      "description": "Условная узнаваемость и распространённость напитка",
+      "scale": "1 — нишевый; 5 — широко известный"
+    },
+    "price": {
+      "name": "Цена",
+      "description": "Относительная стоимость, без привязки к магазину и дате",
+      "scale": "1 — бюджетный; 5 — дорогой"
+    },
+    "tasteIntensity": {
+      "name": "Насыщенность вкуса",
+      "description": "Интенсивность вкуса и выраженность послевкусия",
+      "scale": "1 — мягкий; 5 — насыщенный"
+    }
+  },
+  "factDefinitions": {
+    "hasSugar": {
+      "name": "Наличие сахара",
+      "values": [
+        {
+          "value": true,
+          "label": "С сахаром"
+        },
+        {
+          "value": false,
+          "label": "Без сахара"
+        }
+      ]
+    },
+    "flavor": {
+      "name": "Вкус",
+      "values": [
+        {
+          "value": "classic",
+          "label": "Классический"
+        },
+        {
+          "value": "vanilla",
+          "label": "Ванильный"
+        },
+        {
+          "value": "cherry",
+          "label": "Вишнёвый"
+        },
+        {
+          "value": "lemon",
+          "label": "Лимонный"
+        },
+        {
+          "value": "orange",
+          "label": "Апельсиновый"
+        },
+        {
+          "value": "coffee",
+          "label": "Кофейный"
+        },
+        {
+          "value": "raspberry",
+          "label": "Малиновый"
+        },
+        {
+          "value": "herbal",
+          "label": "Травяной"
+        }
+      ]
+    },
+    "origin": {
+      "name": "Происхождение бренда",
+      "values": [
+        {
+          "value": "international",
+          "label": "Международный"
+        },
+        {
+          "value": "russian",
+          "label": "Российский"
+        },
+        {
+          "value": "european",
+          "label": "Европейский"
+        }
+      ]
+    },
+    "caffeine": {
+      "name": "Уровень кофеина",
+      "type": "number",
+      "min": 1,
+      "max": 5,
+      "description": "1 — низкий; 5 — высокий. Относительная учебная оценка, не содержание в миллиграммах."
+    },
+    "brand": {
+      "name": "Бренд",
+      "values": [
+        {
+          "value": "Coca-Cola",
+          "label": "Coca-Cola"
+        },
+        {
+          "value": "Добрый",
+          "label": "Добрый"
+        },
+        {
+          "value": "Pepsi",
+          "label": "Pepsi"
+        },
+        {
+          "value": "Черноголовка",
+          "label": "Черноголовка"
+        },
+        {
+          "value": "Street",
+          "label": "Street"
+        },
+        {
+          "value": "Любимый",
+          "label": "Любимый"
+        },
+        {
+          "value": "Royal",
+          "label": "Royal"
+        },
+        {
+          "value": "Fritz",
+          "label": "Fritz"
+        },
+        {
+          "value": "Байкал",
+          "label": "Байкал"
+        }
+      ]
+    }
+  },
+  "drinks": [
+    {
+      "id": "coca-original",
+      "name": "Coca-Cola Original Taste",
+      "brand": "Coca-Cola",
+      "description": "Классическая кола с узнаваемым карамельным профилем.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 5,
+        "unusualTaste": 1,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 4,
+        "popularity": 5,
+        "price": 4,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-original.jpg",
+        "alt": "Фотография упаковки: Coca-Cola Original Taste",
+        "width": 244,
+        "height": 800,
+        "credit": {
+          "code": "5449000054227",
+          "productName": "Coca-Cola Original Taste",
+          "source": "https://world.openfoodfacts.org/product/5449000054227",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/005/4227/front_en.563.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-zero",
+      "name": "Coca-Cola Zero Sugar",
+      "brand": "Coca-Cola",
+      "description": "Классический профиль колы с подсластителями, без сахара.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 1,
+        "calories": 1,
+        "classicTaste": 5,
+        "unusualTaste": 1,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 4,
+        "popularity": 5,
+        "price": 4,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": false,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-zero.jpg",
+        "alt": "Фотография упаковки: Coca-Cola Zero",
+        "width": 178,
+        "height": 600,
+        "credit": {
+          "code": "5449000131843",
+          "productName": "Coca-Cola Zero",
+          "source": "https://world.openfoodfacts.org/product/5449000131843",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/013/1843/front_en.215.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-vanilla",
+      "name": "Coca-Cola Vanilla",
+      "brand": "Coca-Cola",
+      "description": "Сладкая кола с мягкой ванильной нотой.",
+      "attributes": {
+        "sweetness": 5,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 3,
+        "unusualTaste": 4,
+        "carbonation": 3,
+        "foodPairing": 3,
+        "partyFit": 4,
+        "everydayUse": 3,
+        "popularity": 4,
+        "price": 5,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "vanilla",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-vanilla.jpg",
+        "alt": "Фотография упаковки: Coca Cola Vanilla",
+        "width": 577,
+        "height": 800,
+        "credit": {
+          "code": "4260231223128",
+          "productName": "Coca Cola Vanilla",
+          "source": "https://world.openfoodfacts.org/product/4260231223128",
+          "image": "https://images.openfoodfacts.org/images/products/426/023/122/3128/front_de.15.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-cherry",
+      "name": "Coca-Cola Cherry",
+      "brand": "Coca-Cola",
+      "description": "Кола с выразительным вишнёвым вкусом и долгим послевкусием.",
+      "attributes": {
+        "sweetness": 5,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 3,
+        "unusualTaste": 4,
+        "carbonation": 4,
+        "foodPairing": 3,
+        "partyFit": 4,
+        "everydayUse": 3,
+        "popularity": 4,
+        "price": 5,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "cherry",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-cherry.jpg",
+        "alt": "Фотография упаковки: Coca-Cola Cherry",
+        "width": 302,
+        "height": 800,
+        "credit": {
+          "code": "5449000214843",
+          "productName": "Coca-Cola Cherry",
+          "source": "https://world.openfoodfacts.org/product/5449000214843",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/021/4843/front_fr.74.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-lemon",
+      "name": "Coca-Cola Lemon",
+      "brand": "Coca-Cola",
+      "description": "Кола с лимонной нотой и умеренной сладостью.",
+      "attributes": {
+        "sweetness": 3,
+        "sugar": 4,
+        "calories": 4,
+        "classicTaste": 4,
+        "unusualTaste": 3,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 4,
+        "everydayUse": 3,
+        "popularity": 3,
+        "price": 5,
+        "tasteIntensity": 3
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "lemon",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-lemon.jpg",
+        "alt": "Фотография упаковки: Cocacola lemon flavor zero sugar",
+        "width": 443,
+        "height": 800,
+        "credit": {
+          "code": "5449000227157",
+          "productName": "Cocacola lemon flavor zero sugar",
+          "source": "https://world.openfoodfacts.org/product/5449000227157",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/022/7157/front_es.34.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-orange",
+      "name": "Coca-Cola Orange",
+      "brand": "Coca-Cola",
+      "description": "Кола с ярким апельсиновым акцентом.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 3,
+        "unusualTaste": 4,
+        "carbonation": 4,
+        "foodPairing": 3,
+        "partyFit": 4,
+        "everydayUse": 2,
+        "popularity": 2,
+        "price": 5,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "orange",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-orange.svg",
+        "alt": "Иллюстрация бутылки колы с апельсиновым акцентом",
+        "width": 240,
+        "height": 360,
+        "credit": null
+      }
+    },
+    {
+      "id": "coca-coffee",
+      "name": "Coca-Cola Coffee",
+      "brand": "Coca-Cola",
+      "description": "Сочетание колы и кофейного профиля с высокой условной оценкой кофеина.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 4,
+        "calories": 4,
+        "classicTaste": 2,
+        "unusualTaste": 5,
+        "carbonation": 3,
+        "foodPairing": 2,
+        "partyFit": 3,
+        "everydayUse": 2,
+        "popularity": 2,
+        "price": 5,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "coffee",
+        "origin": "international",
+        "caffeine": 5
+      },
+      "photo": {
+        "src": "img/drinks/coca-coffee.jpg",
+        "alt": "Фотография упаковки: Coca-Cola plus Coffee",
+        "width": 381,
+        "height": 800,
+        "credit": {
+          "code": "5449000258243",
+          "productName": "Coca-Cola plus Coffee",
+          "source": "https://world.openfoodfacts.org/product/5449000258243",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/025/8243/front_en.40.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "coca-raspberry",
+      "name": "Coca-Cola Raspberry",
+      "brand": "Coca-Cola",
+      "description": "Сладкая кола с необычной малиновой нотой.",
+      "attributes": {
+        "sweetness": 5,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 3,
+        "unusualTaste": 5,
+        "carbonation": 4,
+        "foodPairing": 3,
+        "partyFit": 4,
+        "everydayUse": 2,
+        "popularity": 2,
+        "price": 5,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "raspberry",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/coca-raspberry.jpg",
+        "alt": "Фотография упаковки: Coca-Cola zero raspberry",
+        "width": 411,
+        "height": 800,
+        "credit": {
+          "code": "53956439",
+          "productName": "Coca-Cola zero raspberry",
+          "source": "https://world.openfoodfacts.org/product/53956439",
+          "image": "https://images.openfoodfacts.org/images/products/000/005/395/6439/front_fr.4.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "dobry",
+      "name": "Добрый Cola",
+      "brand": "Добрый",
+      "description": "Привычная кола российского бренда в доступной ценовой категории.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 5,
+        "unusualTaste": 1,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 5,
+        "popularity": 5,
+        "price": 2,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/dobry.jpg",
+        "alt": "Фотография упаковки: добрый кола ж/б 0.33л",
+        "width": 422,
+        "height": 800,
+        "credit": {
+          "code": "4650075427934",
+          "productName": "добрый кола ж/б 0.33л",
+          "source": "https://world.openfoodfacts.org/product/4650075427934",
+          "image": "https://images.openfoodfacts.org/images/products/465/007/542/7934/front_ru.5.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "dobry-zero",
+      "name": "Добрый Cola без сахара",
+      "brand": "Добрый",
+      "description": "Доступная кола без сахара с классическим вкусовым профилем.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 1,
+        "calories": 1,
+        "classicTaste": 4,
+        "unusualTaste": 2,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 5,
+        "popularity": 4,
+        "price": 2,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": false,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/dobry-zero.jpg",
+        "alt": "Фотография упаковки: Кола без сахара",
+        "width": 240,
+        "height": 800,
+        "credit": {
+          "code": "4650075429761",
+          "productName": "Кола без сахара",
+          "source": "https://world.openfoodfacts.org/product/4650075429761",
+          "image": "https://images.openfoodfacts.org/images/products/465/007/542/9761/front_ru.26.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "pepsi",
+      "name": "Pepsi",
+      "brand": "Pepsi",
+      "description": "Сладкая классическая кола с насыщенным вкусом.",
+      "attributes": {
+        "sweetness": 5,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 5,
+        "unusualTaste": 1,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 4,
+        "popularity": 5,
+        "price": 4,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/pepsi.jpg",
+        "alt": "Фотография упаковки: Pepsi 2L",
+        "width": 271,
+        "height": 800,
+        "credit": {
+          "code": "6111252420059",
+          "productName": "Pepsi 2L",
+          "source": "https://world.openfoodfacts.org/product/6111252420059",
+          "image": "https://images.openfoodfacts.org/images/products/611/125/242/0059/front_fr.4.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "pepsi-zero",
+      "name": "Pepsi Zero Sugar",
+      "brand": "Pepsi",
+      "description": "Классическая кола без сахара с выраженным вкусом.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 1,
+        "calories": 1,
+        "classicTaste": 5,
+        "unusualTaste": 2,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 4,
+        "popularity": 4,
+        "price": 4,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": false,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/pepsi-zero.jpg",
+        "alt": "Фотография упаковки: zero sugar",
+        "width": 514,
+        "height": 800,
+        "credit": {
+          "code": "8715600248791",
+          "productName": "zero sugar",
+          "source": "https://world.openfoodfacts.org/product/8715600248791",
+          "image": "https://images.openfoodfacts.org/images/products/871/560/024/8791/front_nl.8.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "pepsi-max",
+      "name": "Pepsi Max",
+      "brand": "Pepsi",
+      "description": "Насыщенная кола без сахара с сильной газацией.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 1,
+        "calories": 1,
+        "classicTaste": 5,
+        "unusualTaste": 2,
+        "carbonation": 5,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 3,
+        "popularity": 4,
+        "price": 4,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": false,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 4
+      },
+      "photo": {
+        "src": "img/drinks/pepsi-max.jpg",
+        "alt": "Фотография упаковки: Pepsi Max",
+        "width": 215,
+        "height": 800,
+        "credit": {
+          "code": "3502110009357",
+          "productName": "Pepsi Max",
+          "source": "https://world.openfoodfacts.org/product/3502110009357",
+          "image": "https://images.openfoodfacts.org/images/products/350/211/000/9357/front_en.101.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "chernogolovka",
+      "name": "Черноголовка Cola",
+      "brand": "Черноголовка",
+      "description": "Кола российского бренда с привычным вкусовым профилем.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 4,
+        "unusualTaste": 2,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 5,
+        "everydayUse": 5,
+        "popularity": 4,
+        "price": 2,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/chernogolovka.jpg",
+        "alt": "Фотография упаковки: Кола",
+        "width": 414,
+        "height": 800,
+        "credit": {
+          "code": "4602441009909",
+          "productName": "Кола",
+          "source": "https://world.openfoodfacts.org/product/4602441009909",
+          "image": "https://images.openfoodfacts.org/images/products/460/244/100/9909/front_en.4.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "chernogolovka-zero",
+      "name": "Черноголовка Cola без сахара",
+      "brand": "Черноголовка",
+      "description": "Кола без сахара с умеренной сладостью и мягким вкусом.",
+      "attributes": {
+        "sweetness": 3,
+        "sugar": 1,
+        "calories": 1,
+        "classicTaste": 4,
+        "unusualTaste": 2,
+        "carbonation": 4,
+        "foodPairing": 5,
+        "partyFit": 4,
+        "everydayUse": 5,
+        "popularity": 3,
+        "price": 2,
+        "tasteIntensity": 3
+      },
+      "facts": {
+        "hasSugar": false,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/chernogolovka-zero.jpg",
+        "alt": "Фотография упаковки: Cola без сахара",
+        "width": 207,
+        "height": 800,
+        "credit": {
+          "code": "4602441022984",
+          "productName": "Cola без сахара",
+          "source": "https://world.openfoodfacts.org/product/4602441022984",
+          "image": "https://images.openfoodfacts.org/images/products/460/244/102/2984/front_ru.3.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "street",
+      "name": "Street Cola",
+      "brand": "Street",
+      "description": "Бюджетная кола с умеренной газацией и мягким профилем.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 3,
+        "unusualTaste": 2,
+        "carbonation": 3,
+        "foodPairing": 4,
+        "partyFit": 4,
+        "everydayUse": 4,
+        "popularity": 2,
+        "price": 1,
+        "tasteIntensity": 3
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 2
+      },
+      "photo": {
+        "src": "img/drinks/street.jpg",
+        "alt": "Фотография упаковки: Street Cola",
+        "width": 452,
+        "height": 800,
+        "credit": {
+          "code": "8697459290568",
+          "productName": "Street Cola",
+          "source": "https://world.openfoodfacts.org/product/8697459290568",
+          "image": "https://images.openfoodfacts.org/images/products/869/745/929/0568/front_en.3.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "lyubimy",
+      "name": "Любимый Cola",
+      "brand": "Любимый",
+      "description": "Доступная кола с привычным вкусом и умеренной газацией.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 4,
+        "unusualTaste": 1,
+        "carbonation": 3,
+        "foodPairing": 4,
+        "partyFit": 4,
+        "everydayUse": 5,
+        "popularity": 3,
+        "price": 2,
+        "tasteIntensity": 3
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "russian",
+        "caffeine": 2
+      },
+      "photo": {
+        "src": "img/drinks/lyubimy.svg",
+        "alt": "Иллюстрация нейтральной красной банки колы",
+        "width": 240,
+        "height": 360,
+        "credit": null
+      }
+    },
+    {
+      "id": "baikal",
+      "name": "Байкал Cola",
+      "brand": "Байкал",
+      "description": "Необычная интерпретация колы с травяным акцентом.",
+      "attributes": {
+        "sweetness": 3,
+        "sugar": 4,
+        "calories": 4,
+        "classicTaste": 2,
+        "unusualTaste": 5,
+        "carbonation": 3,
+        "foodPairing": 3,
+        "partyFit": 3,
+        "everydayUse": 3,
+        "popularity": 3,
+        "price": 2,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "herbal",
+        "origin": "russian",
+        "caffeine": 2
+      },
+      "photo": {
+        "src": "img/drinks/baikal.jpg",
+        "alt": "Фотография упаковки: Напиток сильногазированный \"Байкал\"",
+        "width": 220,
+        "height": 800,
+        "credit": {
+          "code": "4602441013418",
+          "productName": "Напиток сильногазированный \"Байкал\"",
+          "source": "https://world.openfoodfacts.org/product/4602441013418",
+          "image": "https://images.openfoodfacts.org/images/products/460/244/101/3418/front_ru.4.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    },
+    {
+      "id": "royal",
+      "name": "Royal Cola",
+      "brand": "Royal",
+      "description": "Классическая кола средней условной ценовой категории.",
+      "attributes": {
+        "sweetness": 4,
+        "sugar": 5,
+        "calories": 5,
+        "classicTaste": 4,
+        "unusualTaste": 2,
+        "carbonation": 4,
+        "foodPairing": 4,
+        "partyFit": 4,
+        "everydayUse": 4,
+        "popularity": 3,
+        "price": 3,
+        "tasteIntensity": 4
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "international",
+        "caffeine": 3
+      },
+      "photo": {
+        "src": "img/drinks/royal.svg",
+        "alt": "Иллюстрация тёмной бутылки колы с золотистым акцентом",
+        "width": 240,
+        "height": 360,
+        "credit": null
+      }
+    },
+    {
+      "id": "fritz",
+      "name": "Fritz-Kola",
+      "brand": "Fritz",
+      "description": "Европейская кола с насыщенным вкусом и сильной газацией.",
+      "attributes": {
+        "sweetness": 3,
+        "sugar": 4,
+        "calories": 4,
+        "classicTaste": 4,
+        "unusualTaste": 3,
+        "carbonation": 5,
+        "foodPairing": 4,
+        "partyFit": 3,
+        "everydayUse": 2,
+        "popularity": 2,
+        "price": 5,
+        "tasteIntensity": 5
+      },
+      "facts": {
+        "hasSugar": true,
+        "flavor": "classic",
+        "origin": "european",
+        "caffeine": 5
+      },
+      "photo": {
+        "src": "img/drinks/fritz.jpg",
+        "alt": "Фотография упаковки: fritz-kola Original",
+        "width": 122,
+        "height": 480,
+        "credit": {
+          "code": "4260107220015",
+          "productName": "fritz-kola Original",
+          "source": "https://world.openfoodfacts.org/product/4260107220015",
+          "image": "https://images.openfoodfacts.org/images/products/426/010/722/0015/front_en.79.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
+      }
+    }
+  ]
+}

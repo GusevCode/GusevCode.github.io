@@ -1,0 +1,1453 @@
+{
+  "rules": [
+    {
+      "id": "R01",
+      "type": "score",
+      "if": {
+        "param": "occasion",
+        "eq": "food"
+      },
+      "then": [
+        {
+          "attr": "foodPairing",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «К еде»; предпочтение по признаку «Сочетаемость с едой»: высокое значение."
+    },
+    {
+      "id": "R02",
+      "type": "score",
+      "if": {
+        "param": "occasion",
+        "eq": "party"
+      },
+      "then": [
+        {
+          "attr": "partyFit",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «Для вечеринки»; предпочтение по признаку «Подходит для компании»: высокое значение."
+    },
+    {
+      "id": "R03",
+      "type": "score",
+      "if": {
+        "param": "occasion",
+        "eq": "everyday"
+      },
+      "then": [
+        {
+          "attr": "everydayUse",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «На каждый день»; предпочтение по признаку «Повседневное употребление»: высокое значение."
+    },
+    {
+      "id": "R04",
+      "type": "score",
+      "if": {
+        "param": "occasion",
+        "eq": "sport"
+      },
+      "then": [
+        {
+          "attr": "sugar",
+          "op": "low",
+          "weight": 2
+        },
+        {
+          "attr": "calories",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «После активности»; предпочтение по признаку «Содержание сахара»: низкое значение; предпочтение по признаку «Калорийность»: низкое значение."
+    },
+    {
+      "id": "R05",
+      "type": "score",
+      "if": {
+        "param": "healthGoals",
+        "eq": "diet"
+      },
+      "then": [
+        {
+          "attr": "hasSugar",
+          "op": "eq",
+          "value": false,
+          "weight": 12
+        }
+      ],
+      "explain": "Выбрано «Основная цель»: «Без сахара и с минимумом калорий»; предпочтение по признаку «Наличие сахара»: равно Без сахара."
+    },
+    {
+      "id": "R06",
+      "type": "score",
+      "if": {
+        "param": "healthGoals",
+        "eq": "light"
+      },
+      "then": [
+        {
+          "attr": "calories",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Основная цель»: «Менее калорийный вариант»; предпочтение по признаку «Калорийность»: низкое значение."
+    },
+    {
+      "id": "R07",
+      "type": "score",
+      "if": {
+        "param": "healthGoals",
+        "eq": "taste"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Основная цель»: «Прежде всего насыщенный вкус»; предпочтение по признаку «Насыщенность вкуса»: высокое значение."
+    },
+    {
+      "id": "R08",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "classic"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "classic",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Классическая кола»; предпочтение по признаку «Вкус»: равно Классический."
+    },
+    {
+      "id": "R09",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "vanilla"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "vanilla",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Ванильный»; предпочтение по признаку «Вкус»: равно Ванильный."
+    },
+    {
+      "id": "R10",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "cherry"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "cherry",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Вишнёвый»; предпочтение по признаку «Вкус»: равно Вишнёвый."
+    },
+    {
+      "id": "R11",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "lemon"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "lemon",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Лимонный»; предпочтение по признаку «Вкус»: равно Лимонный."
+    },
+    {
+      "id": "R12",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "orange"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "orange",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Апельсиновый»; предпочтение по признаку «Вкус»: равно Апельсиновый."
+    },
+    {
+      "id": "R13",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "coffee"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "coffee",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Кофейный»; предпочтение по признаку «Вкус»: равно Кофейный."
+    },
+    {
+      "id": "R14",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "raspberry"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "raspberry",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Малиновый»; предпочтение по признаку «Вкус»: равно Малиновый."
+    },
+    {
+      "id": "R15",
+      "type": "score",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "herbal"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "herbal",
+          "weight": 14
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Травяной»; предпочтение по признаку «Вкус»: равно Травяной."
+    },
+    {
+      "id": "R16",
+      "type": "score",
+      "if": {
+        "param": "sugarAttitude",
+        "eq": "avoid"
+      },
+      "then": [
+        {
+          "attr": "hasSugar",
+          "op": "eq",
+          "value": false,
+          "weight": 16
+        },
+        {
+          "attr": "sugar",
+          "op": "high",
+          "weight": -2
+        }
+      ],
+      "explain": "Выбрано «Отношение к сахару»: «Выбираю без сахара»; предпочтение по признаку «Наличие сахара»: равно Без сахара; штраф за «Содержание сахара»: высокое значение."
+    },
+    {
+      "id": "R17",
+      "type": "score",
+      "if": {
+        "param": "sugarAttitude",
+        "eq": "allow"
+      },
+      "then": [
+        {
+          "attr": "hasSugar",
+          "op": "eq",
+          "value": true,
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Отношение к сахару»: «Предпочитаю вариант с сахаром»; предпочтение по признаку «Наличие сахара»: равно С сахаром."
+    },
+    {
+      "id": "R18",
+      "type": "score",
+      "if": {
+        "param": "caloriesConcern",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "calories",
+          "op": "low",
+          "weight": 4
+        }
+      ],
+      "explain": "Выбрано «Важность калорийности»: «Очень важна»; предпочтение по признаку «Калорийность»: низкое значение."
+    },
+    {
+      "id": "R19",
+      "type": "score",
+      "if": {
+        "param": "caloriesConcern",
+        "eq": "medium"
+      },
+      "then": [
+        {
+          "attr": "calories",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Важность калорийности»: «Учитываю, но это не главное»; предпочтение по признаку «Калорийность»: низкое значение."
+    },
+    {
+      "id": "R20",
+      "type": "score",
+      "if": {
+        "param": "classicVsUnusual",
+        "eq": "classic"
+      },
+      "then": [
+        {
+          "attr": "classicTaste",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Классика или необычность»: «Классический»; предпочтение по признаку «Классический вкус»: высокое значение."
+    },
+    {
+      "id": "R21",
+      "type": "score",
+      "if": {
+        "param": "classicVsUnusual",
+        "eq": "unusual"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Классика или необычность»: «Необычный»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R22",
+      "type": "score",
+      "if": {
+        "param": "classicVsUnusual",
+        "eq": "balanced"
+      },
+      "then": [
+        {
+          "attr": "classicTaste",
+          "op": "gte",
+          "value": 3,
+          "weight": 5
+        },
+        {
+          "attr": "unusualTaste",
+          "op": "gte",
+          "value": 3,
+          "weight": 5
+        }
+      ],
+      "explain": "Выбрано «Классика или необычность»: «Баланс классики и новых нот»; предпочтение по признаку «Классический вкус»: не ниже 3; предпочтение по признаку «Необычность вкуса»: не ниже 3."
+    },
+    {
+      "id": "R23",
+      "type": "score",
+      "if": {
+        "param": "carbonationLevel",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "carbonation",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Газированность»: «Сильную»; предпочтение по признаку «Газированность»: высокое значение."
+    },
+    {
+      "id": "R24",
+      "type": "score",
+      "if": {
+        "param": "carbonationLevel",
+        "eq": "medium"
+      },
+      "then": [
+        {
+          "attr": "carbonation",
+          "op": "eq",
+          "value": 3,
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Газированность»: «Умеренную»; предпочтение по признаку «Газированность»: равно 3."
+    },
+    {
+      "id": "R25",
+      "type": "score",
+      "if": {
+        "param": "carbonationLevel",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "carbonation",
+          "op": "low",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Газированность»: «Более мягкую»; предпочтение по признаку «Газированность»: низкое значение."
+    },
+    {
+      "id": "R26",
+      "type": "score",
+      "if": {
+        "param": "sweetnessPreference",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "sweetness",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Сладость»: «Очень сладким»; предпочтение по признаку «Уровень сладости»: высокое значение."
+    },
+    {
+      "id": "R27",
+      "type": "score",
+      "if": {
+        "param": "sweetnessPreference",
+        "eq": "medium"
+      },
+      "then": [
+        {
+          "attr": "sweetness",
+          "op": "eq",
+          "value": 4,
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Сладость»: «Умеренно сладким»; предпочтение по признаку «Уровень сладости»: равно 4."
+    },
+    {
+      "id": "R28",
+      "type": "score",
+      "if": {
+        "param": "sweetnessPreference",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "sweetness",
+          "op": "low",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Сладость»: «Менее сладким»; предпочтение по признаку «Уровень сладости»: низкое значение."
+    },
+    {
+      "id": "R29",
+      "type": "score",
+      "if": {
+        "param": "foodType",
+        "eq": "hearty"
+      },
+      "then": [
+        {
+          "attr": "foodPairing",
+          "op": "high",
+          "weight": 3
+        },
+        {
+          "attr": "carbonation",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "Выбрано «Тип еды»: «С сытными блюдами»; предпочтение по признаку «Сочетаемость с едой»: высокое значение; предпочтение по признаку «Газированность»: высокое значение."
+    },
+    {
+      "id": "R30",
+      "type": "score",
+      "if": {
+        "param": "foodType",
+        "eq": "dessert"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "vanilla",
+          "weight": 8
+        },
+        {
+          "attr": "sweetness",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "Выбрано «Тип еды»: «С десертом»; предпочтение по признаку «Вкус»: равно Ванильный; предпочтение по признаку «Уровень сладости»: высокое значение."
+    },
+    {
+      "id": "R31",
+      "type": "score",
+      "if": {
+        "param": "foodType",
+        "eq": "snack"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Тип еды»: «С лёгким перекусом»; предпочтение по признаку «Насыщенность вкуса»: низкое значение."
+    },
+    {
+      "id": "R32",
+      "type": "score",
+      "if": {
+        "param": "budget",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "price",
+          "op": "low",
+          "weight": 4
+        }
+      ],
+      "explain": "Выбрано «Бюджет»: «Бюджетный вариант»; предпочтение по признаку «Цена»: низкое значение."
+    },
+    {
+      "id": "R33",
+      "type": "score",
+      "if": {
+        "param": "budget",
+        "eq": "medium"
+      },
+      "then": [
+        {
+          "attr": "price",
+          "op": "lte",
+          "value": 3,
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Бюджет»: «Средняя ценовая категория»; предпочтение по признаку «Цена»: не выше 3."
+    },
+    {
+      "id": "R34",
+      "type": "score",
+      "if": {
+        "param": "budget",
+        "eq": "premium"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "Выбрано «Бюджет»: «Готов рассмотреть дорогие варианты»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R35",
+      "type": "score",
+      "if": {
+        "param": "brandLoyalty",
+        "eq": "coca"
+      },
+      "then": [
+        {
+          "attr": "brand",
+          "op": "eq",
+          "value": "Coca-Cola",
+          "weight": 12
+        }
+      ],
+      "explain": "Выбрано «Предпочтение бренда»: «Coca-Cola»; предпочтение по признаку «Бренд»: равно Coca-Cola."
+    },
+    {
+      "id": "R36",
+      "type": "score",
+      "if": {
+        "param": "brandLoyalty",
+        "eq": "pepsi"
+      },
+      "then": [
+        {
+          "attr": "brand",
+          "op": "eq",
+          "value": "Pepsi",
+          "weight": 12
+        }
+      ],
+      "explain": "Выбрано «Предпочтение бренда»: «Pepsi»; предпочтение по признаку «Бренд»: равно Pepsi."
+    },
+    {
+      "id": "R37",
+      "type": "score",
+      "if": {
+        "param": "brandLoyalty",
+        "eq": "local"
+      },
+      "then": [
+        {
+          "attr": "origin",
+          "op": "eq",
+          "value": "russian",
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Предпочтение бренда»: «Российские бренды»; предпочтение по признаку «Происхождение бренда»: равно Российский."
+    },
+    {
+      "id": "R38",
+      "type": "score",
+      "if": {
+        "param": "brandLoyalty",
+        "eq": "familiar"
+      },
+      "then": [
+        {
+          "attr": "popularity",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Предпочтение бренда»: «Любой хорошо знакомый бренд»; предпочтение по признаку «Популярность»: высокое значение."
+    },
+    {
+      "id": "R39",
+      "type": "score",
+      "if": {
+        "param": "noveltySeeking",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Готовность к новому»: «Да, люблю эксперименты»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R40",
+      "type": "score",
+      "if": {
+        "param": "noveltySeeking",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "classicTaste",
+          "op": "high",
+          "weight": 2
+        },
+        {
+          "attr": "popularity",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Готовность к новому»: «Предпочитаю знакомый вкус»; предпочтение по признаку «Классический вкус»: высокое значение; предпочтение по признаку «Популярность»: высокое значение."
+    },
+    {
+      "id": "R41",
+      "type": "score",
+      "if": {
+        "param": "timeOfDay",
+        "eq": "morning"
+      },
+      "then": [
+        {
+          "attr": "caffeine",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Время суток»: «Утром»; предпочтение по признаку «Уровень кофеина»: высокое значение."
+    },
+    {
+      "id": "R42",
+      "type": "score",
+      "if": {
+        "param": "timeOfDay",
+        "eq": "day"
+      },
+      "then": [
+        {
+          "attr": "everydayUse",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Время суток»: «Днём»; предпочтение по признаку «Повседневное употребление»: высокое значение."
+    },
+    {
+      "id": "R43",
+      "type": "score",
+      "if": {
+        "param": "timeOfDay",
+        "eq": "evening"
+      },
+      "then": [
+        {
+          "attr": "caffeine",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Время суток»: «Вечером, предпочитаю меньше кофеина»; предпочтение по признаку «Уровень кофеина»: низкое значение."
+    },
+    {
+      "id": "R44",
+      "type": "score",
+      "if": {
+        "param": "caffeineTolerance",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "caffeine",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Предпочтение по кофеину»: «Высокий»; предпочтение по признаку «Уровень кофеина»: высокое значение."
+    },
+    {
+      "id": "R45",
+      "type": "score",
+      "if": {
+        "param": "caffeineTolerance",
+        "eq": "medium"
+      },
+      "then": [
+        {
+          "attr": "caffeine",
+          "op": "eq",
+          "value": 3,
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Предпочтение по кофеину»: «Средний»; предпочтение по признаку «Уровень кофеина»: равно 3."
+    },
+    {
+      "id": "R46",
+      "type": "score",
+      "if": {
+        "param": "caffeineTolerance",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "caffeine",
+          "op": "low",
+          "weight": 4
+        }
+      ],
+      "explain": "Выбрано «Предпочтение по кофеину»: «Как можно ниже»; предпочтение по признаку «Уровень кофеина»: низкое значение."
+    },
+    {
+      "id": "R47",
+      "type": "score",
+      "if": {
+        "param": "originPreference",
+        "eq": "russian"
+      },
+      "then": [
+        {
+          "attr": "origin",
+          "op": "eq",
+          "value": "russian",
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Происхождение бренда»: «Российский»; предпочтение по признаку «Происхождение бренда»: равно Российский."
+    },
+    {
+      "id": "R48",
+      "type": "score",
+      "if": {
+        "param": "originPreference",
+        "eq": "international"
+      },
+      "then": [
+        {
+          "attr": "origin",
+          "op": "eq",
+          "value": "international",
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Происхождение бренда»: «Международный»; предпочтение по признаку «Происхождение бренда»: равно Международный."
+    },
+    {
+      "id": "R49",
+      "type": "score",
+      "if": {
+        "param": "originPreference",
+        "eq": "european"
+      },
+      "then": [
+        {
+          "attr": "origin",
+          "op": "eq",
+          "value": "european",
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Происхождение бренда»: «Европейский»; предпочтение по признаку «Происхождение бренда»: равно Европейский."
+    },
+    {
+      "id": "R50",
+      "type": "score",
+      "if": {
+        "param": "tasteIntensity",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Насыщенность»: «Яркий и интенсивный»; предпочтение по признаку «Насыщенность вкуса»: высокое значение."
+    },
+    {
+      "id": "R51",
+      "type": "score",
+      "if": {
+        "param": "tasteIntensity",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "low",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Насыщенность»: «Мягкий и лёгкий»; предпочтение по признаку «Насыщенность вкуса»: низкое значение."
+    },
+    {
+      "id": "R52",
+      "type": "score",
+      "if": {
+        "param": "everydayFrequency",
+        "eq": "often"
+      },
+      "then": [
+        {
+          "attr": "everydayUse",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Частота выбора»: «Для привычных покупок»; предпочтение по признаку «Повседневное употребление»: высокое значение."
+    },
+    {
+      "id": "R53",
+      "type": "score",
+      "if": {
+        "param": "everydayFrequency",
+        "eq": "rare"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Частота выбора»: «Изредка, для разнообразия»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R54",
+      "type": "score",
+      "if": {
+        "param": "companySize",
+        "eq": "alone"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "Выбрано «Размер компании»: «Для себя»; предпочтение по признаку «Насыщенность вкуса»: высокое значение."
+    },
+    {
+      "id": "R55",
+      "type": "score",
+      "if": {
+        "param": "companySize",
+        "eq": "small"
+      },
+      "then": [
+        {
+          "attr": "partyFit",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Размер компании»: «Для небольшой группы»; предпочтение по признаку «Подходит для компании»: высокое значение."
+    },
+    {
+      "id": "R56",
+      "type": "score",
+      "if": {
+        "param": "companySize",
+        "eq": "large"
+      },
+      "then": [
+        {
+          "attr": "partyFit",
+          "op": "high",
+          "weight": 3
+        },
+        {
+          "attr": "popularity",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Размер компании»: «Для большой компании»; предпочтение по признаку «Подходит для компании»: высокое значение; предпочтение по признаку «Популярность»: высокое значение."
+    },
+    {
+      "id": "R57",
+      "type": "score",
+      "if": {
+        "param": "aftertaste",
+        "eq": "soft"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Послевкусие»: «Мягкое и ненавязчивое»; предпочтение по признаку «Насыщенность вкуса»: низкое значение."
+    },
+    {
+      "id": "R58",
+      "type": "score",
+      "if": {
+        "param": "aftertaste",
+        "eq": "long"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Послевкусие»: «Выраженное и долгое»; предпочтение по признаку «Насыщенность вкуса»: высокое значение."
+    },
+    {
+      "id": "R59",
+      "type": "score",
+      "if": {
+        "param": "aftertaste",
+        "eq": "herbal"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "herbal",
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Послевкусие»: «С травяными нотами»; предпочтение по признаку «Вкус»: равно Травяной."
+    },
+    {
+      "id": "R60",
+      "type": "score",
+      "if": {
+        "param": "fruitNotes",
+        "eq": "citrus"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "lemon",
+          "weight": 8
+        },
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "orange",
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Фруктовые ноты»: «Цитрусовые»; предпочтение по признаку «Вкус»: равно Лимонный; предпочтение по признаку «Вкус»: равно Апельсиновый."
+    },
+    {
+      "id": "R61",
+      "type": "score",
+      "if": {
+        "param": "fruitNotes",
+        "eq": "berry"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "cherry",
+          "weight": 8
+        },
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "raspberry",
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Фруктовые ноты»: «Ягодные»; предпочтение по признаку «Вкус»: равно Вишнёвый; предпочтение по признаку «Вкус»: равно Малиновый."
+    },
+    {
+      "id": "R62",
+      "type": "score",
+      "if": {
+        "param": "fruitNotes",
+        "eq": "none"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "classic",
+          "weight": 8
+        }
+      ],
+      "explain": "Выбрано «Фруктовые ноты»: «Без фруктовых нот»; предпочтение по признаку «Вкус»: равно Классический."
+    },
+    {
+      "id": "R63",
+      "type": "score",
+      "if": {
+        "param": "availability",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "popularity",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Доступность»: «Хочу легко находить в продаже»; предпочтение по признаку «Популярность»: высокое значение."
+    },
+    {
+      "id": "R64",
+      "type": "score",
+      "if": {
+        "param": "availability",
+        "eq": "niche"
+      },
+      "then": [
+        {
+          "attr": "popularity",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Доступность»: «Рассмотрю нишевые варианты»; предпочтение по признаку «Популярность»: низкое значение."
+    },
+    {
+      "id": "R65",
+      "type": "score",
+      "if": {
+        "param": "sweetenerAttitude",
+        "eq": "accept"
+      },
+      "then": [
+        {
+          "attr": "hasSugar",
+          "op": "eq",
+          "value": false,
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Подсластители»: «Рассматриваю варианты с подсластителями»; предпочтение по признаку «Наличие сахара»: равно Без сахара."
+    },
+    {
+      "id": "R66",
+      "type": "score",
+      "if": {
+        "param": "sweetenerAttitude",
+        "eq": "avoid"
+      },
+      "then": [
+        {
+          "attr": "hasSugar",
+          "op": "eq",
+          "value": true,
+          "weight": 10
+        }
+      ],
+      "explain": "Выбрано «Подсластители»: «Предпочитаю напитки с сахаром»; предпочтение по признаку «Наличие сахара»: равно С сахаром."
+    },
+    {
+      "id": "R67",
+      "type": "score",
+      "if": {
+        "param": "pricePriority",
+        "eq": "high"
+      },
+      "then": [
+        {
+          "attr": "price",
+          "op": "low",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Приоритет цены»: «Низкая цена — один из главных факторов»; предпочтение по признаку «Цена»: низкое значение."
+    },
+    {
+      "id": "R68",
+      "type": "score",
+      "if": {
+        "param": "pricePriority",
+        "eq": "low"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Приоритет цены»: «Готов доплатить за необычный вкус»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R69",
+      "type": "score",
+      "if": {
+        "param": "foodVersatility",
+        "eq": "yes"
+      },
+      "then": [
+        {
+          "attr": "foodPairing",
+          "op": "high",
+          "weight": 3
+        }
+      ],
+      "explain": "Выбрано «Универсальность к еде»: «Да, универсальность важна»; предпочтение по признаку «Сочетаемость с едой»: высокое значение."
+    },
+    {
+      "id": "R70",
+      "type": "score",
+      "if": {
+        "param": "foodVersatility",
+        "eq": "no"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Выбрано «Универсальность к еде»: «Нет, интересен самостоятельный вкус»; предпочтение по признаку «Необычность вкуса»: высокое значение."
+    },
+    {
+      "id": "R71",
+      "type": "derive",
+      "if": {
+        "param": "healthGoals",
+        "eq": "diet"
+      },
+      "then": [
+        {
+          "param": "sugarAttitude",
+          "value": "avoid"
+        },
+        {
+          "param": "caloriesConcern",
+          "value": "high"
+        }
+      ],
+      "explain": "Выбрано «Основная цель»: «Без сахара и с минимумом калорий»; установить «Отношение к сахару»: «Выбираю без сахара»; установить «Важность калорийности»: «Очень важна»."
+    },
+    {
+      "id": "R72",
+      "type": "derive",
+      "if": {
+        "param": "healthGoals",
+        "eq": "light"
+      },
+      "then": [
+        {
+          "param": "caloriesConcern",
+          "value": "high"
+        }
+      ],
+      "explain": "Выбрано «Основная цель»: «Менее калорийный вариант»; установить «Важность калорийности»: «Очень важна»."
+    },
+    {
+      "id": "R73",
+      "type": "derive",
+      "if": {
+        "param": "occasion",
+        "eq": "party"
+      },
+      "then": [
+        {
+          "param": "carbonationLevel",
+          "value": "high"
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «Для вечеринки»; установить «Газированность»: «Сильную»."
+    },
+    {
+      "id": "R74",
+      "type": "derive",
+      "if": {
+        "param": "occasion",
+        "eq": "everyday"
+      },
+      "then": [
+        {
+          "param": "everydayFrequency",
+          "value": "often"
+        }
+      ],
+      "explain": "Выбрано «Повод выбора»: «На каждый день»; установить «Частота выбора»: «Для привычных покупок»."
+    },
+    {
+      "id": "R75",
+      "type": "derive",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "classic"
+      },
+      "then": [
+        {
+          "param": "classicVsUnusual",
+          "value": "classic"
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Классическая кола»; установить «Классика или необычность»: «Классический»."
+    },
+    {
+      "id": "R76",
+      "type": "derive",
+      "if": {
+        "param": "favoriteFlavor",
+        "eq": "herbal"
+      },
+      "then": [
+        {
+          "param": "classicVsUnusual",
+          "value": "unusual"
+        }
+      ],
+      "explain": "Выбрано «Любимый вкус»: «Травяной»; установить «Классика или необычность»: «Необычный»."
+    },
+    {
+      "id": "R77",
+      "type": "derive",
+      "if": {
+        "param": "brandLoyalty",
+        "eq": "familiar"
+      },
+      "then": [
+        {
+          "param": "noveltySeeking",
+          "value": "low"
+        }
+      ],
+      "explain": "Выбрано «Предпочтение бренда»: «Любой хорошо знакомый бренд»; установить «Готовность к новому»: «Предпочитаю знакомый вкус»."
+    },
+    {
+      "id": "R78",
+      "type": "derive",
+      "if": {
+        "param": "timeOfDay",
+        "eq": "evening"
+      },
+      "then": [
+        {
+          "param": "caffeineTolerance",
+          "value": "low"
+        }
+      ],
+      "explain": "Выбрано «Время суток»: «Вечером, предпочитаю меньше кофеина»; установить «Предпочтение по кофеину»: «Как можно ниже»."
+    },
+    {
+      "id": "R79",
+      "type": "score",
+      "if": {
+        "param": "servingStyle",
+        "eq": "ice"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Для подачи со льдом пользователь хочет сохранить яркий вкус при разбавлении; модель повышает рейтинг напитков с высокой насыщенностью вкуса."
+    },
+    {
+      "id": "R80",
+      "type": "score",
+      "if": {
+        "param": "servingStyle",
+        "eq": "plain"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "low",
+          "weight": 2
+        }
+      ],
+      "explain": "При подаче без льда пользователь предпочитает мягкий вкус; модель повышает рейтинг менее насыщенных напитков."
+    },
+    {
+      "id": "R81",
+      "type": "score",
+      "if": {
+        "param": "snackPairing",
+        "eq": "salty"
+      },
+      "then": [
+        {
+          "attr": "sweetness",
+          "op": "low",
+          "weight": 2
+        },
+        {
+          "attr": "foodPairing",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "К солёным закускам пользователь выбирает менее сладкий напиток; учитываются низкая сладость и высокая сочетаемость с едой."
+    },
+    {
+      "id": "R82",
+      "type": "score",
+      "if": {
+        "param": "snackPairing",
+        "eq": "sweet"
+      },
+      "then": [
+        {
+          "attr": "flavor",
+          "op": "eq",
+          "value": "vanilla",
+          "weight": 8
+        }
+      ],
+      "explain": "К сладким закускам пользователь хочет ванильный акцент; дополнительный вклад получают напитки с ванильным вкусом."
+    },
+    {
+      "id": "R83",
+      "type": "score",
+      "if": {
+        "param": "snackPairing",
+        "eq": "none"
+      },
+      "then": [
+        {
+          "attr": "unusualTaste",
+          "op": "high",
+          "weight": 2
+        }
+      ],
+      "explain": "Без закусок пользователь хочет необычный самостоятельный вкус; модель повышает рейтинг напитков с высокой необычностью вкуса."
+    },
+    {
+      "id": "R84",
+      "type": "score",
+      "if": {
+        "param": "desiredMood",
+        "eq": "lively"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "high",
+          "weight": 2
+        },
+        {
+          "attr": "caffeine",
+          "op": "high",
+          "weight": 1
+        }
+      ],
+      "explain": "Пользователь хочет яркий вкус и рассматривает более высокий уровень кофеина; учитываются насыщенность вкуса и условная оценка кофеина."
+    },
+    {
+      "id": "R85",
+      "type": "score",
+      "if": {
+        "param": "desiredMood",
+        "eq": "relaxed"
+      },
+      "then": [
+        {
+          "attr": "tasteIntensity",
+          "op": "low",
+          "weight": 2
+        },
+        {
+          "attr": "caffeine",
+          "op": "low",
+          "weight": 1
+        }
+      ],
+      "explain": "Пользователь хочет мягкий вкус и меньше кофеина; модель повышает рейтинг менее насыщенных напитков с низкой условной оценкой кофеина."
+    }
+  ]
+}
