@@ -13,7 +13,7 @@ const section = (id, title, content) => `<section id="${id}" class="inspection-s
 const navigation = (store, items) => `<nav class="subnav" aria-label="${store === 'knowledge' ? 'Разделы базы знаний' : 'Разделы рабочей базы данных'}">${items.map(([id, label, count]) => `<button type="button" data-store="${store}" data-section="${id}" aria-controls="${id}" aria-pressed="false">${label} <span>${count}</span></button>`).join('')}</nav>`;
 const ruleLink = rule => `<a class="rule-ref" href="#rule-${e(rule.id)}" data-open-store="knowledge" data-open-section="kb-${rule.type}" data-rule="${e(rule.id)}">${e(rule.id)}</a>`;
 const factLabel = (kb, attr, value) => kb.factDefinitions[attr]?.values?.find(v => v.value === value)?.label || String(value);
-const search = (kind, label) => `<label class="search-label">${label}<input type="search" data-filter="${kind}" placeholder="Введите текст, параметр или код правила" autocomplete="off"></label>`;
+const search = (kind, label) => `<label class="search-label"><span>${label}</span><span class="search-box"><svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" data-filter="${kind}" placeholder="Введите текст, параметр или код правила" autocomplete="off"></span></label>`;
 const noResults = '<p class="empty filter-empty" hidden>По вашему запросу ничего не найдено.</p>';
 function assignment(kb, effect) {
   return `${e(kb.parameters[effect.param].label)} ${code(effect.param)} → ${e(valueLabel(kb, effect.param, effect.value))} ${code(effect.value)}`;

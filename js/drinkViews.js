@@ -2,6 +2,7 @@
 const e = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const n = value => value.toLocaleString('ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const signed = value => `${value > 0 ? '+' : ''}${n(value)}`;
+const pointsClass = value => value > 0 ? 'points positive' : value < 0 ? 'points negative' : 'points zero';
 const link = (url, text, title = '') => `<a href="${e(url)}" target="_blank" rel="noopener noreferrer"${title ? ` title="${e(title)}"` : ''}>${text}</a>`;
 export function photoImage(drink, className = '') {
   const p = drink.photo;
@@ -36,7 +37,7 @@ function movement(id, index, previous) {
   return `<span class="movement ${difference > 0 ? 'up' : difference < 0 ? 'down' : ''}" aria-label="${label}" title="${label}">${difference > 0 ? '↑' : difference < 0 ? '↓' : '→'}${difference ? Math.abs(difference) : ''}</span>`;
 }
 function explanation(row) {
-  return `<details class="explanation"><summary>Почему такое место</summary><p>Исходная сумма: <strong>${n(row.rawScore)}</strong>. Нормированная оценка: <strong>${n(row.score)} из 100</strong>. При равной сумме учитываются популярность и название.</p>${row.contributions.length ? `<ul>${row.contributions.map(c => `<li><span class="rule-ref">${e(c.ruleId)}</span>: <strong>${signed(c.points)}</strong> балла. ${e(c.explain)}<ul>${c.effects.map(action => `<li><code>${e(action.attr)} · ${e(action.op)}</code> · вес ${signed(action.weight)}${Object.hasOwn(action, 'value') ? ` · порог ${e(action.value)}` : ''} → ${signed(action.points)}</li>`).join('')}</ul></li>`).join('')}</ul>` : '<p>Активных правил пока нет. Все напитки имеют равную оценку 50.</p>'}</details>`;
+  return `<details class="explanation"><summary>Почему такое место</summary><p>Исходная сумма: <strong>${n(row.rawScore)}</strong>. Нормированная оценка: <strong>${n(row.score)} из 100</strong>. При равной сумме учитываются популярность и название.</p>${row.contributions.length ? `<ul>${row.contributions.map(c => `<li><span class="rule-ref">${e(c.ruleId)}</span>: <strong class="${pointsClass(c.points)}">${signed(c.points)}</strong> балла. ${e(c.explain)}<ul>${c.effects.map(action => `<li><code>${e(action.attr)} · ${e(action.op)}</code> · вес ${signed(action.weight)}${Object.hasOwn(action, 'value') ? ` · порог ${e(action.value)}` : ''} → <span class="${pointsClass(action.points)}">${signed(action.points)}</span></li>`).join('')}</ul></li>`).join('')}</ul>` : '<p>Активных правил пока нет. Все напитки имеют равную оценку 50.</p>'}</details>`;
 }
 function leader(kb, row, { full, previousPositions, changed, allEqual }) {
   const { drink } = row;
@@ -53,5 +54,5 @@ export function rankingView(kb, ranking, { full = false, previousPositions = new
   const allEqual = ranking.every(row => row.rawScore === ranking[0].rawScore);
   return (full ? ranking : ranking.slice(0, 5)).map((row, index) => index === 0
     ? leader(kb, row, { full, previousPositions, changed, allEqual })
-    : `<li class="rank-item compact-drink" data-drink="${e(row.drink.id)}" data-flavor="${e(row.drink.facts.flavor)}"><div class="compact-main"><span class="place">${index + 1}</span>${drinkThumbnail(row.drink)}<div class="compact-name"><span class="drink-name">${e(row.drink.name)}${movement(row.drink.id, index, previousPositions)}</span><span class="muted small">${e(row.drink.brand)}</span>${fallbackNote(row.drink)}</div><span class="score">${n(row.score)}</span></div><span class="rank-bar" aria-hidden="true"><span style="width:${row.score}%"></span></span>${full ? explanation(row) : ''}</li>`).join('');
+    : `<li class="rank-item compact-drink" data-place="${index + 1}" data-drink="${e(row.drink.id)}" data-flavor="${e(row.drink.facts.flavor)}"><div class="compact-main"><span class="place">${index + 1}</span>${drinkThumbnail(row.drink)}<div class="compact-name"><span class="drink-name">${e(row.drink.name)}${movement(row.drink.id, index, previousPositions)}</span><span class="muted small">${e(row.drink.brand)}</span>${fallbackNote(row.drink)}</div><span class="score">${n(row.score)}</span></div><span class="rank-bar" aria-hidden="true"><span style="width:${row.score}%"></span></span>${full ? explanation(row) : ''}</li>`).join('');
 }
