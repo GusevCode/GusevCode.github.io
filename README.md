@@ -34,7 +34,7 @@ node tests/encoding.test.mjs
 
 Тесты читают JSON через файловую систему и проверяют требования паспорта, ссылки, покрытие вариантов правилами, прямой вывод до неподвижной точки, циклы, приоритет пользовательских фактов, пропуск вопросов, минимальное число реально заданных вопросов полным перебором, нейтральные ответы, возврат, перезапуск, операции и отрицательные веса, нормализацию, сортировку и объяснения.
 
-Проверка кодировки обходит все файлы `data/`, `js/`, `tests/`, все SVG в `img/`, а также `index.html`, `style.css`, `README.md`: требует корректный UTF-8 без BOM, кириллицу в каждом файле (в SVG — в доступном описании), отсутствие двух вопросительных знаков подряд и символа замены U+FFFD. Отдельные тесты проверяют существование и структуру SVG, самостоятельность иллюстраций, полноту представлений хранилищ, экранирование JSON и точность снимка РБД. Проверяются также все 20 изображений напитков, атрибуция 17 JPEG, три SVG-заглушки, выбор трёх положительных причин и структура живого и итогового рейтингов.
+Проверка кодировки обходит все файлы `data/`, `js/`, `tests/`, все SVG в `img/`, а также `index.html`, `style.css`, `README.md`: требует корректный UTF-8 без BOM, кириллицу в каждом файле (в SVG — в доступном описании), отсутствие двух вопросительных знаков подряд и символа замены U+FFFD. Отдельные тесты проверяют существование и структуру SVG, самостоятельность иллюстраций, полноту представлений хранилищ, экранирование JSON и точность снимка РБД. Проверяются также все 20 локальных JPEG-изображений напитков и их атрибуция, выбор трёх положительных причин и структура живого и итогового рейтингов.
 
 ## Использование
 
@@ -63,8 +63,7 @@ data/rules.json            Правила начисления и вывода
 img/questions/Q01.svg      Оригинальные SVG-иллюстрации вопросов
 …
 img/questions/Q27.svg      Всего 27 изображений, без логотипов и надписей
-img/drinks/*.jpg            17 предоставленных фотографий упаковки
-img/drinks/*.svg            3 авторские заглушки без логотипов
+img/drinks/*.jpg            20 локальных фотографий упаковки (без внешних зависимостей)
 tests/*.test.mjs            Автоматические проверки
 tests/fixtures.mjs          Загрузка данных для тестов
 tests/index.js              Точка входа node --test tests/ в Windows
@@ -134,9 +133,9 @@ tests/index.js              Точка входа node --test tests/ в Windows
 
 ## Источники фотографий
 
-Фотографии упаковки продуктов предоставлены из Open Food Facts. Автор: Open Food Facts contributors; лицензия: CC BY-SA 3.0. Локальные копии уменьшены до 800 пикселей по длинной стороне. Сами JPEG в этом обновлении не изменялись. Товарные знаки принадлежат их владельцам; проект учебный и не связан с производителями напитков. Изображённый продукт или региональная упаковка могут отличаться от условной модели напитка: точное название на фото указано в таблице. Например, фотографии лимонного и малинового вариантов относятся к версиям без сахара; фото «Байкал» иллюстрирует упаковку линейки. Числовые учебные оценки от фотографии не зависят.
+Фотографии упаковки всех 20 продуктов загружены локально из Open Food Facts. Автор: Open Food Facts contributors; лицензия: CC BY-SA 3.0. Локальные копии уменьшены до 800 пикселей по длинной стороне. Товарные знаки принадлежат их владельцам; проект учебный и не связан с производителями напитков. Изображённый продукт или региональная упаковка могут отличаться от условной модели напитка: точное название на фото указано в таблице. Например, фотографии лимонного, апельсинового и малинового вариантов относятся к версиям без сахара; фото «Байкал» иллюстрирует упаковку линейки; для Royal Cola приведено фото RC Cola. Числовые учебные оценки от фотографии не зависят.
 
-Единый источник атрибуции — `photo.credit` в `data/drinks.json` (сведения из предоставленного `credits.json` объединены с базой). Каждое фото содержит относительный путь, русское альтернативное описание и размеры; у авторских SVG атрибуция `null`. В интерфейсе есть полная таблица источников и подпись рядом с фото лидера.
+Единый источник атрибуции — `photo.credit` в `data/drinks.json`. Каждое фото содержит относительный локальный путь, русское альтернативное описание, размеры и сведения о лицензии; внешние графические зависимости отсутствуют. В интерфейсе есть полная таблица источников и подпись рядом с фото лидера.
 
 | Напиток в модели | Продукт на фотографии | Источник | Лицензия / автор |
 |---|---|---|---|
@@ -145,7 +144,7 @@ tests/index.js              Точка входа node --test tests/ в Windows
 | Coca-Cola Vanilla | Coca Cola Vanilla | [Open Food Facts, 4260231223128](https://world.openfoodfacts.org/product/4260231223128) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Coca-Cola Cherry | Coca-Cola Cherry | [Open Food Facts, 5449000214843](https://world.openfoodfacts.org/product/5449000214843) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Coca-Cola Lemon | Cocacola lemon flavor zero sugar | [Open Food Facts, 5449000227157](https://world.openfoodfacts.org/product/5449000227157) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
-| Coca-Cola Orange | Фото недоступно — иллюстрация | Авторская SVG: img/drinks/coca-orange.svg | Оригинальная иллюстрация проекта |
+| Coca-Cola Orange | Coca-Cola Orange | [Open Food Facts, 5449000031624](https://world.openfoodfacts.org/product/5449000031624) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Coca-Cola Coffee | Coca-Cola plus Coffee | [Open Food Facts, 5449000258243](https://world.openfoodfacts.org/product/5449000258243) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Coca-Cola Raspberry | Coca-Cola zero raspberry | [Open Food Facts, 53956439](https://world.openfoodfacts.org/product/53956439) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Добрый Cola | добрый кола ж/б 0.33л | [Open Food Facts, 4650075427934](https://world.openfoodfacts.org/product/4650075427934) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
@@ -156,7 +155,7 @@ tests/index.js              Точка входа node --test tests/ в Windows
 | Черноголовка Cola | Кола | [Open Food Facts, 4602441009909](https://world.openfoodfacts.org/product/4602441009909) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Черноголовка Cola без сахара | Cola без сахара | [Open Food Facts, 4602441022984](https://world.openfoodfacts.org/product/4602441022984) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Street Cola | Street Cola | [Open Food Facts, 8697459290568](https://world.openfoodfacts.org/product/8697459290568) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
-| Любимый Cola | Фото недоступно — иллюстрация | Авторская SVG: img/drinks/lyubimy.svg | Оригинальная иллюстрация проекта |
+| Любимый Cola | Любимая кола 1 литр смотка | [Open Food Facts, 4600494685644](https://world.openfoodfacts.org/product/4600494685644) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Байкал Cola | Напиток сильногазированный "Байкал" | [Open Food Facts, 4602441013418](https://world.openfoodfacts.org/product/4602441013418) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
-| Royal Cola | Фото недоступно — иллюстрация | Авторская SVG: img/drinks/royal.svg | Оригинальная иллюстрация проекта |
+| Royal Cola | RC Cola | [Open Food Facts, 4779018745772](https://world.openfoodfacts.org/product/4779018745772) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |
 | Fritz-Kola | fritz-kola Original | [Open Food Facts, 4260107220015](https://world.openfoodfacts.org/product/4260107220015) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), Open Food Facts contributors |

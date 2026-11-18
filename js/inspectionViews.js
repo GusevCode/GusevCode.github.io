@@ -47,7 +47,7 @@ export function knowledgeView(kb, sourceData) {
     ${section('kb-attributes', `Атрибуты (${attrs.length})`, dictionary)}
     ${section('kb-questions', `База вопросов (<span data-result-count>${kb.questions.length}</span> из ${kb.questions.length})`, search('questions', 'Поиск по вопросам, ответам, параметрам и правилам') + questions + noResults)}
     ${ruleSection('derive', derive, 'Правила «параметр → параметр»')}${ruleSection('score', score, 'Правила «параметр → атрибут»')}
-    ${section('kb-photos', `Источники фотографий (${kb.drinks.filter(d => d.photo.credit).length} фото · ${kb.drinks.filter(d => !d.photo.credit).length} иллюстрации)`, '<p class="empty">Фотографии упаковки: Open Food Facts contributors, CC BY-SA 3.0. Копии уменьшены до 800 пикселей. На фото могут быть региональные варианты и другие версии продукта; это не подтверждение характеристик учебной модели. Товарные знаки принадлежат их владельцам, проект не связан с брендами.</p>' + photoSourcesTable(kb))}
+    ${section('kb-photos', `Источники фотографий (${kb.drinks.filter(d => d.photo.credit).length} фото)`, '<p class="empty">Фотографии упаковки: Open Food Facts contributors, CC BY-SA 3.0. Локальные копии уменьшены до 800 пикселей по длинной стороне и хранятся в проекте. На фото могут быть региональные варианты и другие версии продукта; это не подтверждение характеристик учебной модели. Товарные знаки принадлежат их владельцам, проект не связан с брендами.</p>' + photoSourcesTable(kb))}
     ${section('kb-json', 'Исходные данные (3 JSON-файла)', '<p class="muted">Содержимое файлов, загруженных через fetch(). Только чтение: это автономная база знаний приложения.</p>' + sources)}`;
 }
 export function databaseView(kb, database, answers, ranking) {

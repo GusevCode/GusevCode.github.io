@@ -41,8 +41,8 @@ test('Все напитки имеют локальное изображение
       assert.equal(svg.includes(String.fromCharCode(63, 63)), false);
     }
   }
-  assert.equal(photos, 17);
-  assert.deepEqual(fallback.sort(), ['coca-orange', 'lyubimy', 'royal']);
+  assert.equal(photos, 20);
+  assert.deepEqual(fallback, []);
 });
 test('Подпись лидера и полная таблица источников сохраняют атрибуцию и отмечают иллюстрации', () => {
   const table = photoSourcesTable(kb);

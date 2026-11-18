@@ -416,11 +416,20 @@
         "caffeine": 3
       },
       "photo": {
-        "src": "img/drinks/coca-orange.svg",
-        "alt": "Иллюстрация бутылки колы с апельсиновым акцентом",
-        "width": 240,
-        "height": 360,
-        "credit": null
+        "src": "img/drinks/coca-orange.jpg",
+        "alt": "Фотография упаковки: Coca-Cola Orange",
+        "width": 249,
+        "height": 800,
+        "credit": {
+          "code": "5449000031624",
+          "productName": "Coca-Cola Orange",
+          "source": "https://world.openfoodfacts.org/product/5449000031624",
+          "image": "https://images.openfoodfacts.org/images/products/544/900/003/1624/front_fr.3.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
       }
     },
     {
@@ -869,11 +878,20 @@
         "caffeine": 2
       },
       "photo": {
-        "src": "img/drinks/lyubimy.svg",
-        "alt": "Иллюстрация нейтральной красной банки колы",
-        "width": 240,
-        "height": 360,
-        "credit": null
+        "src": "img/drinks/lyubimy.jpg",
+        "alt": "Фотография упаковки: Любимый Cola",
+        "width": 410,
+        "height": 800,
+        "credit": {
+          "code": "4600494685644",
+          "productName": "Любимая кола 1 литр смотка",
+          "source": "https://world.openfoodfacts.org/product/4600494685644",
+          "image": "https://images.openfoodfacts.org/images/products/460/049/468/5644/front_ru.8.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
       }
     },
     {
@@ -944,11 +962,20 @@
         "caffeine": 3
       },
       "photo": {
-        "src": "img/drinks/royal.svg",
-        "alt": "Иллюстрация тёмной бутылки колы с золотистым акцентом",
-        "width": 240,
-        "height": 360,
-        "credit": null
+        "src": "img/drinks/royal.jpg",
+        "alt": "Фотография упаковки: Royal Cola (RC Cola)",
+        "width": 405,
+        "height": 800,
+        "credit": {
+          "code": "4779018745772",
+          "productName": "RC Cola",
+          "source": "https://world.openfoodfacts.org/product/4779018745772",
+          "image": "https://images.openfoodfacts.org/images/products/477/901/874/5772/front_en.12.full.jpg",
+          "license": "CC BY-SA 3.0",
+          "author": "Open Food Facts contributors",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
+        }
       }
     },
     {
