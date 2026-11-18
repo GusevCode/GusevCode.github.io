@@ -7,7 +7,7 @@ import { rankDrinks } from '../js/ranking.js';
 import { topReasons, rankingView } from '../js/drinkViews.js';
 const kb = makeKnowledgeBase();
 
-test('Все напитки имеют локальное JPEG-изображение, размеры и описание без внешних ссылок', () => {
+test('Все напитки имеют локальное JPEG-изображение с размерами, описанием и указанием источника', () => {
   let photos = 0;
   for (const drink of kb.drinks) {
     const p = drink.photo;
@@ -16,7 +16,12 @@ test('Все напитки имеют локальное JPEG-изображе�
     assert.ok(Number.isInteger(p.width) && p.width > 0);
     assert.ok(Number.isInteger(p.height) && p.height > 0);
     assert.equal(p.src, `img/drinks/${drink.id}.jpg`);
-    assert.equal(Object.hasOwn(p, 'credit'), false);
+    assert.ok(p.credit.author);
+    assert.match(p.credit.source, /^https:\/\/world\.openfoodfacts\.org\/product\/\d+$/u);
+    assert.equal(p.credit.license, 'CC BY-SA 3.0');
+    assert.equal(p.credit.licenseUrl, 'https://creativecommons.org/licenses/by-sa/3.0/');
+    const credits = readFileSync(new URL('../credits.html', import.meta.url), 'utf8');
+    assert.ok(credits.includes(p.credit.source) && credits.includes(p.credit.image));
     const bytes = readFileSync(new URL(`../${p.src}`, import.meta.url));
     assert.deepEqual([...bytes.subarray(0, 3)], [0xff, 0xd8, 0xff]);
     assert.ok(Math.max(p.width, p.height) <= 800);

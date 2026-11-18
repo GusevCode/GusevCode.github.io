@@ -12,7 +12,7 @@ function walk(directory) {
   });
 }
 export function checkEncoding() {
-  const files = [...['data', 'js', 'tests'].flatMap(walk), ...walk('img').filter(file => file.endsWith('.svg')), 'index.html', 'style.css', 'README.md'];
+  const files = [...['data', 'js', 'tests'].flatMap(walk), ...walk('img').filter(file => file.endsWith('.svg')), 'index.html', 'credits.html', 'style.css', 'README.md'];
   for (const file of files) {
     const bytes = readFileSync(path.join(root, file));
     const content = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
