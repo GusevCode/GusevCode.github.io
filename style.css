@@ -443,8 +443,6 @@ progress::-moz-progress-bar {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4), 0 0 28px -8px var(--flavor);
 }
 .hero-photo { width: 100%; height: 188px; object-fit: contain; display: block; border-radius: 6px; }
-.photo-caption { font-size: 10px; line-height: 1.45; color: var(--muted); margin: 8px 0 0; overflow-wrap: anywhere; }
-.photo-caption a { color: #ff8c93; text-underline-offset: 2px; }
 
 .leader-brand { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: #ff8a92; }
 .leader-info { min-width: 0; }
@@ -649,8 +647,6 @@ tbody tr:last-child > * { border-bottom: none; }
 .drinks-table td.description-cell { text-align: left; min-width: 260px; }
 .table-drink { display: flex; align-items: center; gap: 12px; min-width: 205px; text-align: left; }
 .table-drink > div { min-width: 0; }
-.fallback-note { display: block; color: var(--muted); font-size: 10px; line-height: 1.4; margin-top: 3px; }
-.photo-sources-table { min-width: 1050px; }
 
 .dictionary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
 .dictionary > div { padding: 18px 0; border-top: 1px solid var(--line); }
@@ -840,7 +836,6 @@ code {
   .hero-score .score { font-size: 38px; }
   .hero-score > span { font-size: 12px; }
   .leader-description { font-size: 12px; }
-  .photo-caption { font-size: 9px; }
   .leader-reason-block { margin-inline: 14px; }
   .compact-main { grid-template-columns: 26px 38px minmax(0, 1fr) auto; gap: 8px; }
   .compact-main > .score { font-size: 16px; }

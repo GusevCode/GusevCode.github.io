@@ -8,7 +8,8 @@ const kb = makeKnowledgeBase();
 const source = Object.fromEntries(['drinks', 'questions', 'rules'].map(name => [`${name}.json`, readData(name)]));
 test('Представление знаний содержит все подразделы, коды ответов и обе связи с правилами', () => {
   const html = knowledgeView(kb, source);
-  for (const id of ['objects', 'attributes', 'questions', 'derive', 'score', 'photos', 'json']) assert.ok(html.includes(`id="kb-${id}"`));
+  for (const id of ['objects', 'attributes', 'questions', 'derive', 'score', 'json']) assert.ok(html.includes(`id="kb-${id}"`));
+  assert.equal(html.includes('kb-photos'), false);
   assert.equal((html.match(/data-search-row="questions"/gu) || []).length, 27);
   assert.equal((html.match(/data-search-row="rules"/gu) || []).length, 85);
   for (const q of kb.questions) {

@@ -209,17 +209,7 @@
         "src": "img/drinks/coca-original.jpg",
         "alt": "Фотография упаковки: Coca-Cola Original Taste",
         "width": 244,
-        "height": 800,
-        "credit": {
-          "code": "5449000054227",
-          "productName": "Coca-Cola Original Taste",
-          "source": "https://world.openfoodfacts.org/product/5449000054227",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/005/4227/front_en.563.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -251,17 +241,7 @@
         "src": "img/drinks/coca-zero.jpg",
         "alt": "Фотография упаковки: Coca-Cola Zero",
         "width": 178,
-        "height": 600,
-        "credit": {
-          "code": "5449000131843",
-          "productName": "Coca-Cola Zero",
-          "source": "https://world.openfoodfacts.org/product/5449000131843",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/013/1843/front_en.215.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 600
       }
     },
     {
@@ -293,17 +273,7 @@
         "src": "img/drinks/coca-vanilla.jpg",
         "alt": "Фотография упаковки: Coca Cola Vanilla",
         "width": 577,
-        "height": 800,
-        "credit": {
-          "code": "4260231223128",
-          "productName": "Coca Cola Vanilla",
-          "source": "https://world.openfoodfacts.org/product/4260231223128",
-          "image": "https://images.openfoodfacts.org/images/products/426/023/122/3128/front_de.15.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -335,17 +305,7 @@
         "src": "img/drinks/coca-cherry.jpg",
         "alt": "Фотография упаковки: Coca-Cola Cherry",
         "width": 302,
-        "height": 800,
-        "credit": {
-          "code": "5449000214843",
-          "productName": "Coca-Cola Cherry",
-          "source": "https://world.openfoodfacts.org/product/5449000214843",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/021/4843/front_fr.74.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -377,17 +337,7 @@
         "src": "img/drinks/coca-lemon.jpg",
         "alt": "Фотография упаковки: Cocacola lemon flavor zero sugar",
         "width": 443,
-        "height": 800,
-        "credit": {
-          "code": "5449000227157",
-          "productName": "Cocacola lemon flavor zero sugar",
-          "source": "https://world.openfoodfacts.org/product/5449000227157",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/022/7157/front_es.34.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -419,17 +369,7 @@
         "src": "img/drinks/coca-orange.jpg",
         "alt": "Фотография упаковки: Coca-Cola Orange",
         "width": 249,
-        "height": 800,
-        "credit": {
-          "code": "5449000031624",
-          "productName": "Coca-Cola Orange",
-          "source": "https://world.openfoodfacts.org/product/5449000031624",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/003/1624/front_fr.3.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -461,17 +401,7 @@
         "src": "img/drinks/coca-coffee.jpg",
         "alt": "Фотография упаковки: Coca-Cola plus Coffee",
         "width": 381,
-        "height": 800,
-        "credit": {
-          "code": "5449000258243",
-          "productName": "Coca-Cola plus Coffee",
-          "source": "https://world.openfoodfacts.org/product/5449000258243",
-          "image": "https://images.openfoodfacts.org/images/products/544/900/025/8243/front_en.40.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -503,17 +433,7 @@
         "src": "img/drinks/coca-raspberry.jpg",
         "alt": "Фотография упаковки: Coca-Cola zero raspberry",
         "width": 411,
-        "height": 800,
-        "credit": {
-          "code": "53956439",
-          "productName": "Coca-Cola zero raspberry",
-          "source": "https://world.openfoodfacts.org/product/53956439",
-          "image": "https://images.openfoodfacts.org/images/products/000/005/395/6439/front_fr.4.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -545,17 +465,7 @@
         "src": "img/drinks/dobry.jpg",
         "alt": "Фотография упаковки: добрый кола ж/б 0.33л",
         "width": 422,
-        "height": 800,
-        "credit": {
-          "code": "4650075427934",
-          "productName": "добрый кола ж/б 0.33л",
-          "source": "https://world.openfoodfacts.org/product/4650075427934",
-          "image": "https://images.openfoodfacts.org/images/products/465/007/542/7934/front_ru.5.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -587,17 +497,7 @@
         "src": "img/drinks/dobry-zero.jpg",
         "alt": "Фотография упаковки: Кола без сахара",
         "width": 240,
-        "height": 800,
-        "credit": {
-          "code": "4650075429761",
-          "productName": "Кола без сахара",
-          "source": "https://world.openfoodfacts.org/product/4650075429761",
-          "image": "https://images.openfoodfacts.org/images/products/465/007/542/9761/front_ru.26.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -629,17 +529,7 @@
         "src": "img/drinks/pepsi.jpg",
         "alt": "Фотография упаковки: Pepsi 2L",
         "width": 271,
-        "height": 800,
-        "credit": {
-          "code": "6111252420059",
-          "productName": "Pepsi 2L",
-          "source": "https://world.openfoodfacts.org/product/6111252420059",
-          "image": "https://images.openfoodfacts.org/images/products/611/125/242/0059/front_fr.4.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -671,17 +561,7 @@
         "src": "img/drinks/pepsi-zero.jpg",
         "alt": "Фотография упаковки: zero sugar",
         "width": 514,
-        "height": 800,
-        "credit": {
-          "code": "8715600248791",
-          "productName": "zero sugar",
-          "source": "https://world.openfoodfacts.org/product/8715600248791",
-          "image": "https://images.openfoodfacts.org/images/products/871/560/024/8791/front_nl.8.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -713,17 +593,7 @@
         "src": "img/drinks/pepsi-max.jpg",
         "alt": "Фотография упаковки: Pepsi Max",
         "width": 215,
-        "height": 800,
-        "credit": {
-          "code": "3502110009357",
-          "productName": "Pepsi Max",
-          "source": "https://world.openfoodfacts.org/product/3502110009357",
-          "image": "https://images.openfoodfacts.org/images/products/350/211/000/9357/front_en.101.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -755,17 +625,7 @@
         "src": "img/drinks/chernogolovka.jpg",
         "alt": "Фотография упаковки: Кола",
         "width": 414,
-        "height": 800,
-        "credit": {
-          "code": "4602441009909",
-          "productName": "Кола",
-          "source": "https://world.openfoodfacts.org/product/4602441009909",
-          "image": "https://images.openfoodfacts.org/images/products/460/244/100/9909/front_en.4.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -797,17 +657,7 @@
         "src": "img/drinks/chernogolovka-zero.jpg",
         "alt": "Фотография упаковки: Cola без сахара",
         "width": 207,
-        "height": 800,
-        "credit": {
-          "code": "4602441022984",
-          "productName": "Cola без сахара",
-          "source": "https://world.openfoodfacts.org/product/4602441022984",
-          "image": "https://images.openfoodfacts.org/images/products/460/244/102/2984/front_ru.3.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -839,17 +689,7 @@
         "src": "img/drinks/street.jpg",
         "alt": "Фотография упаковки: Street Cola",
         "width": 452,
-        "height": 800,
-        "credit": {
-          "code": "8697459290568",
-          "productName": "Street Cola",
-          "source": "https://world.openfoodfacts.org/product/8697459290568",
-          "image": "https://images.openfoodfacts.org/images/products/869/745/929/0568/front_en.3.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -881,17 +721,7 @@
         "src": "img/drinks/lyubimy.jpg",
         "alt": "Фотография упаковки: Любимый Cola",
         "width": 410,
-        "height": 800,
-        "credit": {
-          "code": "4600494685644",
-          "productName": "Любимая кола 1 литр смотка",
-          "source": "https://world.openfoodfacts.org/product/4600494685644",
-          "image": "https://images.openfoodfacts.org/images/products/460/049/468/5644/front_ru.8.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -923,17 +753,7 @@
         "src": "img/drinks/baikal.jpg",
         "alt": "Фотография упаковки: Напиток сильногазированный \"Байкал\"",
         "width": 220,
-        "height": 800,
-        "credit": {
-          "code": "4602441013418",
-          "productName": "Напиток сильногазированный \"Байкал\"",
-          "source": "https://world.openfoodfacts.org/product/4602441013418",
-          "image": "https://images.openfoodfacts.org/images/products/460/244/101/3418/front_ru.4.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -965,17 +785,7 @@
         "src": "img/drinks/royal.jpg",
         "alt": "Фотография упаковки: Royal Cola (RC Cola)",
         "width": 405,
-        "height": 800,
-        "credit": {
-          "code": "4779018745772",
-          "productName": "RC Cola",
-          "source": "https://world.openfoodfacts.org/product/4779018745772",
-          "image": "https://images.openfoodfacts.org/images/products/477/901/874/5772/front_en.12.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 800
       }
     },
     {
@@ -1007,17 +817,7 @@
         "src": "img/drinks/fritz.jpg",
         "alt": "Фотография упаковки: fritz-kola Original",
         "width": 122,
-        "height": 480,
-        "credit": {
-          "code": "4260107220015",
-          "productName": "fritz-kola Original",
-          "source": "https://world.openfoodfacts.org/product/4260107220015",
-          "image": "https://images.openfoodfacts.org/images/products/426/010/722/0015/front_en.79.full.jpg",
-          "license": "CC BY-SA 3.0",
-          "author": "Open Food Facts contributors",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "changes": "Предоставленная локальная копия уменьшена до 800 пикселей по длинной стороне."
-        }
+        "height": 480
       }
     }
   ]
