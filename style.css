@@ -725,10 +725,6 @@ tbody tr:last-child > * { border-bottom: none; }
   white-space: pre;
 }
 
-/* Вкладка «О системе» */
-.reading { max-width: 920px; }
-.reading h2 { margin-top: 34px; }
-.reading p { color: var(--ink-soft); }
 code {
   font-family: Consolas, monospace;
   font-size: .88em;
@@ -739,42 +735,6 @@ code {
   padding: 1px 5px;
   overflow-wrap: anywhere;
 }
-.flow {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 22px 0;
-  padding: 16px;
-  border-radius: 16px;
-  background: var(--glass);
-  border: 1px solid var(--line);
-}
-.flow-step {
-  flex: 1 1 150px;
-  display: grid;
-  gap: 2px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 118, 128, 0.2);
-}
-.flow-step span {
-  display: inline-grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 7px;
-  background: linear-gradient(110deg, #b50c14, #ef1b24);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 750;
-  margin-bottom: 4px;
-}
-.flow-step strong { color: #fff; font-size: 14px; }
-.flow-step small { color: var(--muted); font-size: 12px; }
-.flow-arrow { color: #ff5c66; font-weight: 700; font-size: 18px; }
-
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -855,7 +815,6 @@ code {
   .inspection-section h2 { font-size: 21px; }
   .inspection-section h2, .rules-table tr { scroll-margin-top: 170px; }
   .inspection-section .table-wrap { max-height: 65vh; }
-  .flow-arrow { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .header-bubbles span, .leader-changed { animation: none !important; }

@@ -152,8 +152,6 @@ function renderDatabase() {
   selectInspection('database', selectedSections.database);
 }
 function renderKnowledge() {
-  const attrs = Object.entries(kb.attributes);
-  $('#about-counts').textContent = `В базе ${kb.drinks.length} напитков, ${attrs.length} числовых атрибутов на объект, ${kb.questions.length} вопросов и ${Object.keys(kb.parameters).length} параметров. Правил: ${kb.rules.length}, из них ${kb.rules.filter(r => r.type === 'score').length} правил начисления баллов и ${kb.rules.filter(r => r.type === 'derive').length} правил вывода.`;
   $('#knowledge').innerHTML = knowledgeView(kb, sourceData);
   selectInspection('knowledge', selectedSections.knowledge);
 }
